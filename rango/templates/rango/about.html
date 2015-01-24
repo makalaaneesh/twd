@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>About</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" ></script>
+        <script type="text/javascript" src="{% static 'rango/js/about.js' %}"></script>
+    </head>
+
+    <body>
+        <h1>Rango says...</h1>
+        <p id="fade1" >This is the about page.</p>
+        <a id="fade2" href="{% url 'index' %}" style="position:absolute; color:green; ">Go Back to the Index page</a><br />
+        
+    </body>
+
+</html>
