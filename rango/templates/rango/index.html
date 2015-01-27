@@ -11,6 +11,17 @@
         hello world! <strong>{{ boldmessage }}</strong><br />
         <a href="{% url 'about' %}">About</a><br />
         <img src="{% static 'rango/images/rango.jpg' %}" alt="Picture of rango"/>
+        <h1> Categories</h1>
+        {% if categories %}
+        	<ul>
+        		{% for category in categories %}
+        			<li> <a href="/rango/category/{{ category.slug }}">{{category.name}} </a></li>
+        		{% endfor %}
+        	</ul>
+        	{% else %}
+        		There are no categories present
+        	{% endif %}
+
     </body>
 
 </html>
